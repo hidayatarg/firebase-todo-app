@@ -20,3 +20,5 @@ Deploy the code to firebase functions using the following command:
 
 ## Install ExpressJs
 `npm i express --save` and deploy to  the firebase and go to the `https://....net/api/todos`
+
+You can also run the application locally using `firebase serve` command instead of deploying it every time. 
