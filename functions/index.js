@@ -1,15 +1,10 @@
 const functions = require('firebase-functions');
 
-const helloWorld = functions.https.onRequest((request, response) => {
-     response.send("Hello from Firebase!");
-});
+const app = require('express')();
 
-const randomNumber = functions.https.onRequest((request, response) => {
-     const number = Math.round(Math.random() * 100);
-     response.json(number.toString());
-});
+const {
+    getAllTodos
+} = require('./API/todos')
 
-module.exports = {
-     helloWorld,
-     randomNumber
-};
+app.get('/todos', getAllTodos);
+exports.api = functions.https.onRequest(app);

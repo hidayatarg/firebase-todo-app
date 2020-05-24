@@ -18,3 +18,5 @@ Deploy the code to firebase functions using the following command:
 
 > Go to the Project Console > Functions and there you will find the URL of the API.
 
+## Install ExpressJs
+`npm i express --save` and deploy to  the firebase and go to the `https://....net/api/todos`
